@@ -1,0 +1,10 @@
+Package: monetize
+Title: Why Should Your Hard Work be Free?
+Version: 0.0.0.9000
+Authors@R: person("Matt", "Dray", , "mwdray@gmail.com", role = c("aut", "cre"))
+Description: A demonstration of how to integrate ads, a trial-period, paywalls 
+    and lootboxes into an R package.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
