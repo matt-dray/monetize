@@ -2,7 +2,7 @@
 % Please edit documentation in R/ads.R
 \name{watch_ad}
 \alias{watch_ad}
-\title{Watch an Ad to Receive More MEGACOINS}
+\title{Watch an Ad to Receive More MEGA COINS}
 \usage{
 watch_ad(duration = c("short", "long"))
 }
@@ -13,7 +13,7 @@ watch_ad(duration = c("short", "long"))
 Nothing.
 }
 \description{
-Watch an Ad to Receive More MEGACOINS
+Watch an Ad to Receive More MEGA COINS
 }
 \examples{
 \dontrun{watch_ad("long")}

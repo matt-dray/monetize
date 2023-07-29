@@ -1,4 +1,4 @@
-#' Watch an Ad to Receive More MEGACOINS
+#' Watch an Ad to Receive More MEGA COINS
 #'
 #' @param duration Character. Length of the ad, either 'short' or 'long'.
 #'
@@ -34,7 +34,7 @@ watch_ad <- function(duration = c("short", "long")) {
   # Update and report current coin balance
   coin_balance_new <- user_data[["coin_balance"]] + coins_gained
   .edit_user_data_value("coin_balance", coin_balance_new)
-  message("Congratulations! Your new MEGACOIN total is ", coin_balance_new, "!")
+  message("Congratulations! Your new MEGA COIN total is ", coin_balance_new, "!")
 
 }
 

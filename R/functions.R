@@ -49,7 +49,7 @@ add_one <- function(number) {
   if (user_data[["coin_balance"]] > 0) {
 
     message(
-      "💰 Your MEGACOIN balance is now ", coin_balance_new,
+      "💰 Your MEGA COIN balance is now ", coin_balance_new,
       "! Try watch_ad()!"
     )
 
@@ -74,7 +74,7 @@ add_one <- function(number) {
   # Empty balance warning
   if (coin_balance_new == 0) {
     stop(
-      "😭 You'll need more MEGACOINS to re-use this function! Try watch_ad()!",
+      "😭 You'll need more MEGA COINS to re-use this function! Try watch_ad()!",
       call. = FALSE
     )
   }
