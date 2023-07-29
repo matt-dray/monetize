@@ -16,12 +16,12 @@ Numeric.
 Add One to a Number
 }
 \details{
-At Member Level 1, you'll get your supplied number plus 1. Except 20\% of the
-time it'll be wrong!
+At Member Level 1, you'll receive the answer, but it'll be wrong 20\% of the
+time.
 
-At Member Level 2, the answer will always be correct!
+At Member Level 2, the answer will always be correct.
 
-At Member Level 3, the answer will print in a colour of your choice!
+At Member Level 3, the answer will print correctly... with a hat.
 
 If you run out of MEGACOINS, simply \link{watch_ad}!
 }

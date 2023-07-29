@@ -3,12 +3,12 @@
 #' @param number Numeric. A number to which one will be added. See details.
 #'
 #' @details
-#' At Member Level 1, you'll get your supplied number plus 1. Except 20% of the
-#' time it'll be wrong!
+#' At Member Level 1, you'll receive the answer, but it'll be wrong 20% of the
+#' time.
 #'
-#' At Member Level 2, the answer will always be correct!
+#' At Member Level 2, the answer will always be correct.
 #'
-#' At Member Level 3, the answer will print in a colour of your choice!
+#' At Member Level 3, the answer will print correctly... with a hat.
 #'
 #' If you run out of MEGACOINS, simply [watch_ad]!
 #'
@@ -20,7 +20,9 @@
 add_one <- function(number) {
 
   is_number <- inherits(number, "numeric")
-  if (!is_number) stop("Whoops! You must provide a numeric value!", call. = FALSE)
+  if (!is_number) {
+    stop("Whoops! You must provide a numeric value!", call. = FALSE)
+  }
 
   # Check/create user data
   has_user_data <- .check_for_user_data()
@@ -28,49 +30,51 @@ add_one <- function(number) {
   user_data <- .fetch_user_data()
 
   # Update and report trial days remaining
+  .countdown_trial_period(user_data)
 
-  time_diff <- as.numeric(difftime(Sys.Date(), user_data[["trial_start"]]))
-  days_left_updated <- 30 - time_diff
+  # Update user level if enough ads watched
+  .adjust_level(user_data)
+  user_data <- .fetch_user_data()
+  message(
+    "🏅 Your MEMBER LEVEL is ", user_data[["member_level"]],
+    "! Watch more ads!"
+  )
 
-  .edit_user_data("days_left", days_left_updated)
+  # Update ad balance, run function if allowed
 
-  if (days_left_updated <= 0) {
-    stop(
-      paste(
-        "🛑 Uhoh! Your free trial ended! Mail me 500 units of your local",
-        "currency and I'll reactivate the package for you!"
-      ),
-      call. = FALSE
+  coin_balance_new <- user_data[["coin_balance"]] - 1
+  if (coin_balance_new < 0) coin_balance_new <- 0
+  .edit_user_data_value("coin_balance", coin_balance_new)
+
+  if (user_data[["coin_balance"]] > 0) {
+
+    message(
+      "💰 Your MEGACOIN balance is now ", coin_balance_new, "! ",
+      "Watch more ads!"
     )
-  }
-
-  if (days_left_updated > 0) {
-    message("📅 You have ", days_left_updated, " days left of your free trial!")
-  }
-
-  # Update and report trial days remaining, run function if allowed
-
-  ad_balance_updated <- user_data[["ad_balance"]] - 1
-
-  if (ad_balance_updated < 0) ad_balance_updated <- 0
-
-  .edit_user_data("ad_balance", ad_balance_updated)
-
-  if (user_data[["ad_balance"]] > 0) {
-
-    message("💰 Your MEGACOIN balance is now ", ad_balance_updated, "!")
 
     # Calculate and return answer
+
     result <- number + 1
-    offset <- sample(c(-1, 0, 1), 1, prob = c(0.1, 0.8, 0.1))
-    result <- result + offset
+
+    if (user_data[["member_level"]] == 1) {
+      offset <- sample(c(-1, 0, 1), 1, prob = c(0.1, 0.8, 0.1))
+      result <- result + offset
+    }
+
+    if (user_data[["member_level"]] == 3) {
+      hat <- sample(c("🧢", "👒", "🎩", "🎓",  "🪖", "⛑️"), 1)
+      names(result) <- hat
+    }
+
     return(result)
 
   }
 
-  if (ad_balance_updated == 0) {
+  # Empty balance warning
+  if (coin_balance_new == 0) {
     stop(
-      "😭 Uhoh! You'll need more MEGACOINS to re-use this function! Try watch_ad().",
+      "😭 You'll need more MEGACOINS to re-use this function! Try watch_ad().",
       call. = FALSE
     )
   }
