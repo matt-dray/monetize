@@ -3,14 +3,14 @@
 #' @param number Numeric. A number to which one will be added. See details.
 #'
 #' @details
-#' At Member Level 1, you'll receive the answer, but it'll be wrong 20% of the
-#' time.
+#' At MEMBER LEVEL 1, you'll receive the answer, but it'll be wrong 20% of the
+#' time!
 #'
-#' At Member Level 2, the answer will always be correct.
+#' At MEMBER LEVEL 2, the answer will always be correct!
 #'
-#' At Member Level 3, the answer will print correctly... with a hat.
+#' At MEMBER LEVEL 3, the answer will print correctly... with a hat!
 #'
-#' If you run out of MEGACOINS, simply [watch_ad]!
+#' If you run out of MEGA COINS, simply [watch_ad]!
 #'
 #' @return Numeric.
 #'
@@ -37,7 +37,7 @@ add_one <- function(number) {
   user_data <- .fetch_user_data()
   message(
     "🏅 Your MEMBER LEVEL is ", user_data[["member_level"]],
-    "! Watch more ads!"
+    "! Try watch_ad()!"
   )
 
   # Update ad balance, run function if allowed
@@ -49,8 +49,8 @@ add_one <- function(number) {
   if (user_data[["coin_balance"]] > 0) {
 
     message(
-      "💰 Your MEGACOIN balance is now ", coin_balance_new, "! ",
-      "Watch more ads!"
+      "💰 Your MEGACOIN balance is now ", coin_balance_new,
+      "! Try watch_ad()!"
     )
 
     # Calculate and return answer
@@ -74,7 +74,7 @@ add_one <- function(number) {
   # Empty balance warning
   if (coin_balance_new == 0) {
     stop(
-      "😭 You'll need more MEGACOINS to re-use this function! Try watch_ad().",
+      "😭 You'll need more MEGACOINS to re-use this function! Try watch_ad()!",
       call. = FALSE
     )
   }

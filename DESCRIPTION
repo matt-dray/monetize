@@ -1,9 +1,11 @@
 Package: monetize
-Title: Why Should Your Hard Work be Free?
+Title: Inspiration for Monetizing your R Package
 Version: 0.0.0.9000
 Authors@R: person("Matt", "Dray", , "mwdray@gmail.com", role = c("aut", "cre"))
-Description: A demonstration of how to integrate ads, a trial-period, paywalls 
-    and lootboxes into an R package.
+Description: A demonstration of how to integrate paywalls and ads into your 
+    R package. This is obviously a joke.
+URL: https://matt-dray.github.io/monetize/
+BugReports: https://github.com/matt-dray/monetize/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

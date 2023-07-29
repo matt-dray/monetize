@@ -16,14 +16,14 @@ Numeric.
 Add One to a Number
 }
 \details{
-At Member Level 1, you'll receive the answer, but it'll be wrong 20\% of the
-time.
+At MEMBER LEVEL 1, you'll receive the answer, but it'll be wrong 20\% of the
+time!
 
-At Member Level 2, the answer will always be correct.
+At MEMBER LEVEL 2, the answer will always be correct!
 
-At Member Level 3, the answer will print correctly... with a hat.
+At MEMBER LEVEL 3, the answer will print correctly... with a hat!
 
-If you run out of MEGACOINS, simply \link{watch_ad}!
+If you run out of MEGA COINS, simply \link{watch_ad}!
 }
 \examples{
 \dontrun{add_one(1)}

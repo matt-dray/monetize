@@ -67,7 +67,7 @@
 #' @noRd
 .init_user_data <- function(days_left_init = 30, coin_balance_init = 3) {
   list(
-    trial_start  = packageDate("monetize"),
+    trial_start  = utils::packageDate("monetize"),
     days_left    = days_left_init,
     coin_balance = coin_balance_init,
     coin_total   = coin_balance_init,
