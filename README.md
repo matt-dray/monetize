@@ -30,7 +30,7 @@ add_one(1)
 ```
 📅 You have 30 days left of your FREE TRIAL!
 🏅 Your MEMBER LEVEL is 1! Try watch_ad()!
-💰 Your MEGACOIN balance is now 2! Try watch_ad()!
+💰 Your MEGA COIN balance is now 2! Try watch_ad()!
 [1] 2
 ```
 
@@ -42,7 +42,7 @@ add_one(1)
 ```
 📅 You have 30 days left of your FREE TRIAL!
 🏅 Your MEMBER LEVEL is 1! Try watch_ad()!
-💰 Your MEGACOIN balance is now 1! Try watch_ad()!
+💰 Your MEGA COIN balance is now 1! Try watch_ad()!
 [1] 3
 ```
 
@@ -54,7 +54,7 @@ add_one(1)
 ```
 📅 You have 30 days left of your FREE TRIAL!
 🏅 Your MEMBER LEVEL is 1! Try watch_ad()!
-Error: 😭 You'll need more MEGACOINS to re-use this function! Try watch_ad()!
+Error: 😭 You'll need more MEGA COINS to re-use this function! Try watch_ad()!
 ```
 
 Watch a `"short'` ad for 1 MEGA COIN or a `"long"` ad for 3 MEGA COINS.
@@ -68,7 +68,7 @@ watch_ad("short")
 🌭 CONSUME ACME(TM)-BRAND RECONSTITUTED MEAT-LIKE CYLINDERS! 🐕
 🌭 CONSUME ACME(TM)-BRAND RECONSTITUTED MEAT-LIKE CYLINDERS! 🐕
 🌭 CONSUME ACME(TM)-BRAND RECONSTITUTED MEAT-LIKE CYLINDERS! 🐕
-Congratulations! Your new MEGACOIN total is 1!
+Congratulations! Your new MEGA COIN total is 1!
 ```
 
 Reach MEMBER LEVEL 2 after reaching 10 total MEGA COINS; MEMBER LEVEL 3 after 20 MEGA COINS.
@@ -81,7 +81,7 @@ add_one(1)
 ```
 📅 You have 29 days left of your FREE TRIAL!
 🏅 Your MEMBER LEVEL is 3! Try watch_ad()!
-💰 Your MEGACOIN balance is now 19! Try watch_ad()!
+💰 Your MEGA COIN balance is now 19! Try watch_ad()!
 🎩 
  2 
 ```
